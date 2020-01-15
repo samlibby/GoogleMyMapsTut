@@ -43,12 +43,13 @@
 	   * element that contains the map. */
 	  #mapid {
 		height: 100%;
+    		width: 100%;
+    		padding: 0px;
+    		border-width: 0px;
 	  }
 	  /* Optional: Makes the sample page fill the window. */
 	  html, body {
 		height: 100%;
-		margin: 0;
-		padding: 0;
 	  }
 	</style>
 	</head>
@@ -70,11 +71,11 @@
 	  function initMap() {
 		map = new google.maps.Map(document.getElementById('mapid'), {
 		  center: {lat: -33.9249, lng: 18.4241},
-		  zoom: 10
+		  zoom: 10, mapTypeId: 'terrain'
 		});
 	  }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap" width="640" height="480"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap"
     async defer></script>
     
   </body>

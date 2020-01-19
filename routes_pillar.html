@@ -74,24 +74,14 @@
 		
 	<div> 
 		<h1>Directions from Cape Town to West Coast National Park, South Africa </h1>
+		<h3> using: https://maps.googleapis.com/maps/api/directions/json?origin=Cape+Town+South+Africa&destination=West+Coast+National+Park&avoid=highways&departure_time=now&key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM </h3>
+		<h3> The parameters used are: Origin = Cape Town, South Africa, Destination = West Coast National Park, Avoid = Highways, Departure Time = Now </h3>
 	</div>
 		
 	<div id="mapid"></div>
-	<script>
-	  var map;
-	  var myLatlng = new google.maps.LatLng(-33.9249,18.4241);
-	  var mapOptions = {zoom: 15,center: myLatlng}
-	  var map = new google.maps.Map(document.getElementById("mapid"), mapOptions);
-	
-	function initMap() {
-	
-	map = new google.maps.Map(document.getElementById('mapid'), {
-	  center: {lat: -33.9249, lng: 18.4241},
-	  zoom: 10, mapTypeId: 'terrain'
-	});
-  }		
-	  </script>
-	    <script src="https://maps.googleapis.com/maps/api/directions/json?origin=Cape+Town+South+Africa&destination=West+Coast+National+Park&key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM"
+	<script>		
+	</script>
+	    <script src="https://maps.googleapis.com/maps/api/directions/json?origin=Cape+Town+South+Africa&destination=West+Coast+National+Park&avoid=highways&departure_time=now&key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM"
 	    async defer></script>
 	</div>
   </body>

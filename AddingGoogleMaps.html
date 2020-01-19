@@ -75,23 +75,23 @@
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-	// Initialize and add the map
-	var marker;
-	function initMap() {
-	  // The location of Johannesburg
-	  var johannesburg = {lat: -26.2041, lng: 28.0473};
-	  // The map, centered at Johannesburg
-	  var map = new google.maps.Map(
-	      document.getElementById('map'), {zoom: 10, center: johannesburg});
-	  marker = new google.maps.Marker({ map: map, draggable: true, animation: google.maps.Animation.DROP, position: {lat: -26.2041, lng: 28.0473});
-	  marker.addListener('click', toggleBounce);}
-	function toggleBounce() {
-	  if (marker.getAnimation() ! == null) {
-	      marker.setAnimation(null);
-	  } else {
-	    marker.setAnimation(google.maps.Animation.BOUNCE);
-	  }
-	 }
+		// Initialize and add the map
+		var marker;
+		function initMap() {
+		  // The location of Johannesburg
+		  var johannesburg = {lat: -26.2041, lng: 28.0473};
+		  // The map, centered at Johannesburg
+		  var map = new google.maps.Map(
+		      document.getElementById('map'), {zoom: 10, center: johannesburg});
+		  marker = new google.maps.Marker({ map: map, draggable: true, animation: google.maps.Animation.DROP, position: {lat: -26.2041, lng: 28.0473});
+		  marker.addListener('click', toggleBounce);}
+		function toggleBounce() {
+		  if (marker.getAnimation() ! == null) {
+		      marker.setAnimation(null);
+		  } else {
+		    marker.setAnimation(google.maps.Animation.BOUNCE);
+		  }
+		 }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap">

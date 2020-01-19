@@ -26,32 +26,20 @@
           mapTypeId: 'terrain'
         });
 
-        // Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
+// Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
         var script = document.createElement('script');
         script.src = 'https://samlibby.github.io/GoogleMyMapsTut/Ec_Res_Projects.geojson';
         document.getElementsByTagName('head')[0].appendChild(script);
      
         window.eqfeed_callback = function(results) {
-          var test = results.features[1].geometry.coordinates;
-          var marker = new google.maps.Marker ({position: test, map: map});
+        var test = results.features[1].geometry.coordinates;
+        var marker = new google.maps.Marker ({position: test, map: map});
       }
-      
-      
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      //window.eqfeed_callback = function(results) {
-        //for (var i = 0; i < results.features.length; i++) {
-          //var coords = results.features[i].geometry.coordinates;
-          //var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          //var marker = new google.maps.Marker({
-           //position: latLng,
-            //map: map
-          //});
-       // }
-      //}
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap">
     </script>
   </body>
 </html>
+

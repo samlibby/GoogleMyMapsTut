@@ -1,5 +1,7 @@
 <!-- Places - Reference: https://developers.google.com/places/web-service/details -->
+<!-- Reference: https://developers.google.com/places/web-service/place-id --> 
 
+<!-- Getting Started - Directions API - Reference: https://developers.google.com/maps/documentation/directions/start -->
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -24,9 +26,10 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-	  width: 200px;
-	  background-color: #e6e6ff;
-	  }
+	  	width: 25%;
+	  	background-color: #e6e6ff;
+   		display: inline;
+}
 
 	  li a {
 		display: block;
@@ -61,24 +64,26 @@
 	<!--Reference: w3schools - CSS Navigation Bar - Link: https://www.w3schools.com/css/css_navbar.asp -->
 		<ul id="nav">											
 			<li><a href="index.html"> Google MyMaps Tutorial </a></li>
-			<li><a href="map_pillar.html"> Google MyMaps Map Pillar </a></li>
-			<li><a href="routes_pillar.html"> Google MyMaps Routes Pillar </a></li>
-			<li><a href="places_pillar.html"> Google MyMaps Places Pillar </a></li>
-			<li><a href="AddingGoogleMaps.html"> Tut. 1 - Adding Google Maps </a></li>
-			<li><a href="MarkerCluster.html"> Tut. 2 - Marker Clustering </a></li>
-			<li><a href="Earthquakes.html"> Tut. 3 - Earthquakes </a></li>
-			<li><a href="JavaScriptAPI"> Option 1 - Google Maps JavaScript API  </a></li>
+			<li><a href="map_pillar.html"> Overview </a></li>
+			<li><a href="routes_pillar.html"> Directions </a></li>
+			<li><a href="places_pillar.html"> Places </a></li>
+			<li><a href="AddingGoogleMaps.html"> Tutorial 1 </a></li>
+			<li><a href="MarkerCluster.html"> Tutorial 2 </a></li>
+			<li><a href="Earthquakes.html"> Tutorial 3 </a></li>
+			<li><a href="JavaScriptAPI"> Option 1 </a></li>
 		</ul>
 	</div>
 		
 	<div> 
-		<h1> Google Maps - Places  </h1>
+		<h1> Places Details URL returning JSON </h1>
+		<h3> using: https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJUWpA8GgMlR4RQUDTsdnJiiM&language=en&fields=name,geometry,icon,photo,&key=[API_KEY]</h3>
+		<h3> The parameters used are: place_id, key, language, fields(name, geometry, icon, photo)  </h3>
 	</div>
 		
 	<div id="mapid"></div>
 	<script>		
 	</script>
-	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap"
+	    <script src="https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJUWpA8GgMlR4RQUDTsdnJiiM&language=en&fields=name,geometry,icon,photo,&key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM"
 	    async defer></script>
 	</div>
   </body>

@@ -32,7 +32,7 @@
         document.getElementsByTagName('head')[0].appendChild(script);
      
 
-        var test = {lat: 37.0902, lng: -95.7129};
+        var test = results.features[1].geometry.coordinates;
 
         var marker = new google.maps.Marker ({position: test, map: map});
         

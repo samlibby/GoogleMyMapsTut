@@ -94,28 +94,28 @@
         document.getElementsByTagName('head')[0].appendChild(script);
       }
 
-     map.data.setStyle(function(feature) {
-          var magnitude = feature.getProperty('mag');
-          return {
-            icon: getCircle(magnitude)
-          };
-        });
-      }
+	     map.data.setStyle(function(feature) {
+		  var magnitude = feature.getProperty('mag');
+		  return {
+		    icon: getCircle(magnitude)
+		  };
+		});
+	      }
 
-      function getCircle(magnitude) {
-        return {
-          path: google.maps.SymbolPath.CIRCLE,
-          fillColor: 'red',
-          fillOpacity: .2,
-          scale: Math.pow(2, magnitude) / 2,
-          strokeColor: 'white',
-          strokeWeight: .5
-        };
-      }
+	      function getCircle(magnitude) {
+		return {
+		  path: google.maps.SymbolPath.CIRCLE,
+		  fillColor: 'red',
+		  fillOpacity: .2,
+		  scale: Math.pow(2, magnitude) / 2,
+		  strokeColor: 'white',
+		  strokeWeight: .5
+		};
+	      }
 
-      function eqfeed_callback(results) {
-        map.data.addGeoJson(results);
-      }
+	      function eqfeed_callback(results) {
+		map.data.addGeoJson(results);
+	      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap">

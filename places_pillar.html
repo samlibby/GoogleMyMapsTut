@@ -1,1 +1,85 @@
-ChIJ1-4miA9QzB0Rh6ooKPzhf2g
+<!-- Places - Reference: https://developers.google.com/places/web-service/details -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+
+  <title> GEOM99 - Google MyMaps </title>
+
+  <!-- Reference: w3schools - Meta Data - Link: https://www.w3schools.com/html/html5_syntax.asp -->
+  <meta charset = "UTF-8"> 		
+
+  <!-- Reference: w3schools - CSS - Link: https://www.w3schools.com/css/css_howto.asp -->
+  <style>
+
+	  body {
+		background-color: GhostWhite;
+	  }
+
+	  h1, h3 { color: DarkSlateGrey;
+	  text-align: center;}
+
+	  #nav {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	  width: 200px;
+	  background-color: #e6e6ff;
+	  }
+
+	  li a {
+		display: block;
+		color: DarkSlateGrey;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  }
+
+	  li a:hover {
+		background-color: DarkSlateGrey;
+		color: white;
+	  }
+	  /* Always set the map height explicitly to define the size of the div
+	   * element that contains the map. */
+	  #mapid {
+		height: 400px;
+    		width: 100%;
+    		padding: 10px;
+		margin-left:auto; 
+		margin-right:auto;
+	  }
+	  
+	  /* Optional: Makes the sample page fill the window. */
+	  html, body {
+		height: 100%;
+	  }
+	</style>
+	</head>
+	<body>
+	
+	<div id="header">
+	<!--Reference: w3schools - CSS Navigation Bar - Link: https://www.w3schools.com/css/css_navbar.asp -->
+		<ul id="nav">											
+			<li><a href="index.html"> Google MyMaps Tutorial </a></li>
+			<li><a href="map_pillar.html"> Google MyMaps Map Pillar </a></li>
+			<li><a href="routes_pillar.html"> Google MyMaps Routes Pillar </a></li>
+			<li><a href="places_pillar.html"> Google MyMaps Places Pillar </a></li>
+			<li><a href="AddingGoogleMaps.html"> Tut. 1 - Adding Google Maps </a></li>
+			<li><a href="MarkerCluster.html"> Tut. 2 - Marker Clustering </a></li>
+			<li><a href="Earthquakes.html"> Tut. 3 - Earthquakes </a></li>
+			<li><a href="JavaScriptAPI"> Option 1 - Google Maps JavaScript API  </a></li>
+		</ul>
+	</div>
+		
+	<div> 
+		<h1> Google Maps - Places  </h1>
+	</div>
+		
+	<div id="mapid"></div>
+	<script>		
+	</script>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap"
+	    async defer></script>
+	</div>
+  </body>
+</html>

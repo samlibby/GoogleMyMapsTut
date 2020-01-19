@@ -26,12 +26,19 @@
           mapTypeId: 'terrain'
         });
 
-        // Create a <script> tag and set the USGS URL as the source.
+        // Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
         var script = document.createElement('script');
         script.src = 'https://samlibby.github.io/GoogleMyMapsTut/Ec_Res_Projects.geojson';
         document.getElementsByTagName('head')[0].appendChild(script);
-      }
+     
 
+        var test = {lat: 37.0902, lng: -95.7129};
+
+        var marker = new google.maps.Marker ({position: test, map: map});
+        
+      }
+      
+      
       // Loop through the results array and place a marker for each
       // set of coordinates.
       window.eqfeed_callback = function(results) {

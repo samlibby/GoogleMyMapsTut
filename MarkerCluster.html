@@ -39,6 +39,7 @@
         var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
             position: location,
+            zoom: 10,
             label: labels[i % labels.length]
           });
         });

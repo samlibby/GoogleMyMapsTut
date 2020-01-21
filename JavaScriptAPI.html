@@ -89,9 +89,11 @@ li a:hover {
 // Data Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
         map.data.loadGeoJson('https://samlibby.github.io/GoogleMyMapsTut/Ec_Res_Projects.json');}
 // Reference: https://developers.google.com/maps/documentation/javascript/datalayer#style_geojson_data
-	map.data.setStyle({
-	  icon: 'https://samlibby.github.io/GoogleMyMapsTut/ecology_marker.png'
-	});
+		map.data.setStyle(function(feature) {
+		  return google.maps.Data.StyleOptions ({ 
+		  icon: 'https://samlibby.github.io/GoogleMyMapsTut/ecology_marker.png'
+		});
+	});	
 
     </script>
     <script async defer

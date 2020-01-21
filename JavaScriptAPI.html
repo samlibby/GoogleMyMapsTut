@@ -26,7 +26,7 @@ body {
   background-color: GhostWhite;
 }
 
-h1 { color: DarkSlateGrey;
+h1, h6 { color: DarkSlateGrey;
 text-align: center;}
 	
 #nav {
@@ -70,7 +70,8 @@ li a:hover {
 	</div>
 	
 	<div>
-		<h1> Ecological Restoration Locations in the United States </h1>
+		<h1> Coastal Ecological Restoration Locations in the United States </h1>
+		<h6> Data from the Coastal Systems Portfolio Initiative (CSPI) database from the US Army Corps of Engineers </h6> 
 	</div>
 
     <div id="map"></div>
@@ -82,7 +83,8 @@ li a:hover {
           center: new google.maps.LatLng(37.0902, -95.7129),
           mapTypeId: 'terrain'
         });
-// Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
+// Reference: https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/layer-data-style
+// Data Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
         map.data.loadGeoJson('https://samlibby.github.io/GoogleMyMapsTut/Ec_Res_Projects.json');
       }
 

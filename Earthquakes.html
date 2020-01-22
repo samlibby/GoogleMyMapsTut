@@ -1,4 +1,3 @@
-<!-- Reference: https://developers.google.com/maps/documentation/javascript/earthquakes -->
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -58,8 +57,9 @@
     </style>
   </head>
   <body>
-	<div id="header">
+	
 	<!--Reference: w3schools - CSS Navigation Bar - Link: https://www.w3schools.com/css/css_navbar.asp -->
+	<div>
 		<ul id="nav">											
 			<li><a href="index.html"> Google MyMaps Tutorial </a></li>
 			<li><a href="map_pillar.html"> Google MyMaps Map Pillar </a></li>
@@ -68,15 +68,15 @@
 			<li><a href="AddingGoogleMaps.html"> Tut. 1 - Adding Google Maps </a></li>
 			<li><a href="MarkerCluster.html"> Tut. 2 - Marker Clustering </a></li>
 			<li><a href="Earthquakes.html"> Tut. 3 - Earthquakes </a></li>
-			<li><a href="JavaScriptAPI"> Option 1 - Google Maps JavaScript API  </a></li>
+			<li><a href="JavaScriptAPI"> Option 1 - Google Maps JavaScript API  </a></li>	
 		</ul>
 	</div>
-		
 	<div> 
-		<h1> Earthquake Tutorial (HeatMap)</h1>
+		<h1> Earthquake Tutorial (Heat Map)</h1>
 	</div>
 	  
     <div id="map"></div>
+    <!-- Reference: Google Maps Platform - Link: https://developers.google.com/maps/documentation/javascript/earthquakes -->	  
     <script>
       var map; 
       function initMap() {
@@ -86,11 +86,9 @@
           mapTypeId: 'terrain'
         });
 
-        // Create a <script> tag and set the USGS URL as the source.
         var script = document.createElement('script');
-
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+	      
+        // Reference: USGS - Link: http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
         script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
         document.getElementsByTagName('head')[0].appendChild(script);
 

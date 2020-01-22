@@ -53,6 +53,15 @@ li a:hover {
   color: white;
 }
 
+ #info-box {
+	background-color: white;
+	border: 1px solid black;
+	bottom: 30px;
+	height: 20px;
+	padding: 10px;
+	position: absolute;
+	left: 30px;
+}
 
 </style>
 </head> 
@@ -114,7 +123,10 @@ li a:hover {
 // Data Reference: https://catalog.data.gov/dataset/ecosytem-restoration-projects
         map.data.loadGeoJson('https://samlibby.github.io/GoogleMyMapsTut/Ec_Res_Projects.json');}
 // Reference: https://developers.google.com/maps/documentation/javascript/datalayer#style_geojson_data	
-
+// Reference: https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/examples/layer-data-event
+	map.data.addListener('mouseover', function(event) {
+		document.getElementById('info-box').textContent = 
+			event.feature.getProperty('SDSFEATURENAME'); }); }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADbIACfHHrKIbsTtAjWPnTrUSZl29zVMM&callback=initMap">
